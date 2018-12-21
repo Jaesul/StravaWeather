@@ -1,0 +1,143 @@
+<!HTML DOCTYPE>
+<html>
+<head>
+<title>Results</title>
+</head>
+<style>
+
+    body, html {
+  height: 100%;
+  margin: 0;
+}
+    .bg {
+/* The image used */
+background-image: url("https://www.assos.com/Webstore%20Images/cms/leaderboard/Leaderboard-banner-desktop-1.jpg");
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+input[type=text], select {
+  width: 61%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  opacity: 0.75;
+}
+
+input[type=submit] {
+  width:61%;
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  border: 1px solid #ccc;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+input[type=submit]:hover {
+  background-color: #000000;
+  opacity: 0.8;
+}
+
+body {font-family:Verdana,sans-serif}
+h1 {font-size:1.1em;margin:0em}
+.fammember{
+    border-radius: 5px;
+    width:150px;height:150px;
+    float:left;
+    margin:0.2em;
+    position:relative;}
+
+.who, .temp {
+    border-radius: 5px;
+    width:100%;
+    position:absolute;
+    background-color: rgba(0,0,0,0.5);
+    color:rgb(255,255,255);
+    padding:0.1em;
+}
+
+.container {
+position: absolute;
+top: 8%;
+left: 16%;
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+}
+
+.containerend {
+position: absolute;
+top: 30%;
+left: 15%;
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+}
+
+.containerstart {
+position: absolute;
+top: 68%;
+left: 15%;
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+}
+
+.centerpic {
+position: absolute;
+top: 53%;
+left: 57.5%;
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+}
+
+
+.who{top:0; left:0;text-align:left;}
+.temp{bottom:0; right:0;text-align:left;}
+</style>
+<body style="margin: 0;" text = #f5f5f5>
+<div class= bg>
+    <font face = "DengXian" size = "6.5"><div class = container><h1>STRAVA | WEATHER</h1></div></font>
+    </form>
+<div class="containerstart"><div class='fammember' style="background-image: url('{{start_weather_Photo_url}}');">
+	  <h1 class='who'>{{e_weather}}</h1>
+    <p><img src="{{start_weather_Photo_url}}" alt="hello"/></p>
+    <div class='temp'>
+		  Start {{s_temp}}F
+	  </div>
+</div>
+</div>
+    <div class = containerend>
+    <div class='fammember' style="background-image: url('{{end_weather_Photo_url}}');">
+	  <h1 class='who'>{{e_weather}}</h1>
+    <p><img src="{{start_weather_Photo_url}}" alt="hello"/></p>
+        <div class='temp'>
+		  End {{e_temp}}F
+        </div>
+</div>
+
+    </div>
+    <font face = "DengXian" size = "3.5">
+
+        <div class="centerpic"> <form action="/stravaresults" method="post">
+            <strong><font face = "DengXian" size = "6">Let's get that next KOM</font></strong>
+       <!-- Here is only a basic form. Please add more HTML codes based on your design. !-->
+        <label for="search_input"></label>
+       <input type="text" id="search_input" name="search_input" placeholder="Ride ID"/>
+       <input type="submit" value="Submit" name="gobtn"/>
+        </form></div></font></div></div></body>
+</html>
